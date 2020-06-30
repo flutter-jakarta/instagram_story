@@ -1,0 +1,154 @@
+{
+  "userStories": [
+    {
+      "id": 1,
+      "isRead": false,
+      "user": {
+        "id": 1,
+        "userName": "Bambang",
+        "fullName": "Bambang Prayogo",
+        "avatarUrl": "https://randomuser.me/api/portraits/men/1.jpg"
+      },
+      "stories": [
+        {
+          "id": 11,
+          "mediaType": "image",
+          "mediaUrl": "https://picsum.photos/600/900",
+          "createdAt": "2020-06-21T14:36:47.168Z"
+        },
+        {
+          "id": 12,
+          "mediaType": "image",
+          "mediaUrl": "https://picsum.photos/600/900",
+          "createdAt": "2020-06-21T13:36:47.168Z"
+        },
+        {
+          "id": 13,
+          "mediaType": "image",
+          "mediaUrl": "https://picsum.photos/600/900",
+          "createdAt": "2020-06-21T12:36:47.168Z"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "isRead": false,
+      "user": {
+        "id": 2,
+        "userName": "leodavinci",
+        "fullName": "Leonardo Da Vinci",
+        "avatarUrl": "https://pbs.twimg.com/profile_images/1051157346796400646/t33XAm04.jpg"
+      },
+      "stories": [
+        {
+          "id": 21,
+          "mediaType": "image",
+          "mediaUrl": "https://picsum.photos/600/900",
+          "createdAt": "2020-06-20T14:36:47.168Z"
+        },
+        {
+          "id": 22,
+          "mediaType": "image",
+          "mediaUrl": "https://picsum.photos/600/900",
+          "createdAt": "2020-06-20T14:36:47.168Z"
+        },
+        {
+          "id": 23,
+          "mediaType": "image",
+          "mediaUrl": "https://picsum.photos/600/900",
+          "createdAt": "2020-06-20T14:36:47.168Z"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "isRead": false,
+      "user": {
+        "id": 3,
+        "userName": "hamzahdede",
+        "fullName": "Dede Hamzah",
+        "avatarUrl": "https://randomuser.me/api/portraits/men/6.jpg"
+      },
+      "stories": [
+        {
+          "id": 21,
+          "mediaType": "image",
+          "mediaUrl": "https://picsum.photos/600/900",
+          "createdAt": "2020-06-20T14:36:47.168Z"
+        },
+        {
+          "id": 22,
+          "mediaType": "image",
+          "mediaUrl": "https://picsum.photos/600/900",
+          "createdAt": "2020-06-20T14:36:47.168Z"
+        },
+        {
+          "id": 23,
+          "mediaType": "image",
+          "mediaUrl": "https://picsum.photos/600/900",
+          "createdAt": "2020-06-20T14:36:47.168Z"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "isRead": false,
+      "user": {
+        "id": 1,
+        "userName": "Pratama",
+        "fullName": "Pratama Utama",
+        "avatarUrl": "https://randomuser.me/api/portraits/men/3.jpg"
+      },
+      "stories": [
+        {
+          "id": 11,
+          "mediaType": "image",
+          "mediaUrl": "https://picsum.photos/600/900",
+          "createdAt": "2020-06-21T14:36:47.168Z"
+        },
+        {
+          "id": 12,
+          "mediaType": "image",
+          "mediaUrl": "https://picsum.photos/600/900",
+          "createdAt": "2020-06-21T13:36:47.168Z"
+        },
+        {
+          "id": 13,
+          "mediaType": "image",
+          "mediaUrl": "https://picsum.photos/600/900",
+          "createdAt": "2020-06-21T12:36:47.168Z"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "isRead": false,
+      "user": {
+        "id": 1,
+        "userName": "Conan",
+        "fullName": "Conan Edogawa",
+        "avatarUrl": "https://randomuser.me/api/portraits/men/4.jpg"
+      },
+      "stories": [
+        {
+          "id": 11,
+          "mediaType": "image",
+          "mediaUrl": "https://picsum.photos/600/900",
+          "createdAt": "2020-06-21T14:36:47.168Z"
+        },
+        {
+          "id": 12,
+          "mediaType": "image",
+          "mediaUrl": "https://picsum.photos/600/900",
+          "createdAt": "2020-06-21T13:36:47.168Z"
+        },
+        {
+          "id": 13,
+          "mediaType": "image",
+          "mediaUrl": "https://picsum.photos/600/900",
+          "createdAt": "2020-06-21T12:36:47.168Z"
+        }
+      ]
+    }
+  ]
+}

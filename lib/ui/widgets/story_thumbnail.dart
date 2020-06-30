@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_story/model/user_story.dart';
 
 class StoryThumbnail extends StatelessWidget {
+  final UserStory userStory;
+
+  const StoryThumbnail({Key key, this.userStory}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -14,8 +19,8 @@ class StoryThumbnail extends StatelessWidget {
                 Colors.redAccent,
                 Colors.yellowAccent,
               ],
-              begin: FractionalOffset(1, 1),
-              end: FractionalOffset(-1, -1),
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
             ),
             shape: BoxShape.circle,
           ),
@@ -31,12 +36,11 @@ class StoryThumbnail extends StatelessWidget {
                 ),
               ),
               child: CircleAvatar(
-                backgroundImage:
-                    NetworkImage('https://picsum.photos/250?image=9'),
+                backgroundImage: NetworkImage(userStory.user.avatarUrl),
               )),
         ),
         SizedBox(height: 6),
-        Text('flutter_boy')
+        Text(userStory.user.userName)
       ],
     );
   }
