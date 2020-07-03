@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_story/ui/pages/story_list_page.dart';
 import 'package:instagram_story/ui/widgets/story_thumbnail.dart';
 import 'package:instagram_story/model/user_story.dart';
 
@@ -13,7 +14,17 @@ class StoryThumbnailList extends StatelessWidget {
         child: ListView.separated(
       scrollDirection: Axis.horizontal,
       itemBuilder: (BuildContext context, int index) {
-        return StoryThumbnail(userStory: userStories[index]);
+        return GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (BuildContext context) => StoryListPage(
+                    userStories: userStories,
+                  ),
+                ),
+              );
+            },
+            child: StoryThumbnail(userStory: userStories[index]));
       },
       itemCount: userStories.length,
       separatorBuilder: (BuildContext context, int index) {
