@@ -2,13 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:instagram_story/model/user_story.dart';
 import 'package:instagram_story/ui/widgets/story_actions.dart';
 import 'package:instagram_story/ui/widgets/story_info.dart';
+import 'package:instagram_story/ui/widgets/story_page_indicator.dart';
 
 class StoryPage extends StatefulWidget {
   final UserStory userStory;
+  final Function onNextPage;
 
   const StoryPage({
     Key key,
     @required this.userStory,
+    @required this.onNextPage,
   }) : super(key: key);
 
   @override
@@ -19,6 +22,10 @@ class _StoryPageState extends State<StoryPage> {
   int activeStory = 0;
 
   void _nextStory() {
+    if (activeStory == widget.userStory.stories.length - 1) {
+      widget.onNextPage();
+    }
+
     if (activeStory >= widget.userStory.stories.length - 1) {
       return null;
     }
@@ -65,10 +72,24 @@ class _StoryPageState extends State<StoryPage> {
   Widget _buildStoryHud() {
     return Container(
       padding: EdgeInsets.all(10),
-      child: StoryInfo(
-        avatarUrl: widget.userStory.user.avatarUrl,
-        userName: widget.userStory.user.userName,
-        storyCreatedAt: widget.userStory.stories[activeStory].createdAt,
+      child: Column(
+        children: <Widget>[
+          StoryPageIndicator(
+            nextStory: _nextStory,
+            activeStory: activeStory,
+            stories: widget.userStory.stories,
+            parentPadding: 10,
+          ),
+          SizedBox(height: 10),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            child: StoryInfo(
+              avatarUrl: widget.userStory.user.avatarUrl,
+              userName: widget.userStory.user.userName,
+              storyCreatedAt: widget.userStory.stories[activeStory].createdAt,
+            ),
+          ),
+        ],
       ),
     );
   }

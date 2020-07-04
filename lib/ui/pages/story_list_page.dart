@@ -4,16 +4,19 @@ import 'package:instagram_story/ui/pages/story_page.dart';
 
 class StoryListPage extends StatelessWidget {
   final List<UserStory> userStories;
+  PageController _pageController = PageController();
 
-  const StoryListPage({Key key, this.userStories}) : super(key: key);
+  StoryListPage({Key key, this.userStories}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: PageView.builder(
+          controller: _pageController,
           itemBuilder: (BuildContext context, int index) {
             return StoryPage(
+              onNextPage: _nextPage,
               userStory: userStories[index],
             );
           },
@@ -21,5 +24,14 @@ class StoryListPage extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void _nextPage() {
+    if (_pageController.page == userStories.length - 1) {
+      return;
+    }
+
+    _pageController.nextPage(
+        duration: Duration(seconds: 1), curve: Curves.easeInOut);
   }
 }
