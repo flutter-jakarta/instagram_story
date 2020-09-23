@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_story/ui/pages/home_page.dart';
+import 'package:instagram_story/ui/pages/poc_page.dart';
 
 void main() {
   runApp(MyApp());
